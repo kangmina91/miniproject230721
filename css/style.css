@@ -943,6 +943,15 @@ p {
 @media (max-width: 768px) {
   .MainVisual .MainImage figure figcaption h2 {
     font-size: 48rem;
+    margin: 0 0 40rem 0;
+  }
+  .MainVisual .MainImage figure figcaption strong {
+    font-size: 24rem;
+    margin: 0 0 36rem 0;
+  }
+  .MainVisual .MainImage figure figcaption p {
+    font-size: 24rem;
+    margin: 0 0 36rem 0;
   }
   .MainVisual .MainImage .scroll_arrow {
     bottom: 20rem;

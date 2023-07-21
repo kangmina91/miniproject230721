@@ -1,3 +1,4 @@
+// 헤더
 @media (max-width: 768px) {
 
 
@@ -154,7 +155,7 @@
     }
 }
 
-// 메인 인트로듀스 섹션
+// 메인 비쥬얼 섹션
 @media (max-width: 768px) {
     .MainVisual {
         .MainImage {
@@ -162,6 +163,17 @@
                 figcaption {
                     h2 {
                         font-size: 48rem;
+                        margin: 0 0 40rem 0;
+                    }
+
+                    strong {
+                        font-size: 24rem;
+                        margin: 0 0 36rem 0;
+                    }
+
+                    p {
+                        font-size: 24rem;
+                        margin: 0 0 36rem 0;
                     }
                 }
             }
@@ -339,6 +351,14 @@
         }
     }
 }
+
+
+
+
+
+
+
+
 
 /* 노트북 & 테블릿 가로 */
 @media all and (min-width:768px) and (max-width:1600px) {
