@@ -897,17 +897,17 @@ p {
     /* r */
     display: block;
     position: fixed;
-    inset: 30rem 30rem auto auto;
+    inset: 15rem 15rem auto auto;
     z-index: 1000;
-    width: 30rem;
-    height: 30rem;
+    width: 50rem;
+    height: 50rem;
     background: #ddd;
     border-radius: 5rem;
   }
   .mobile_btn::before, .mobile_btn::after {
     content: "";
     position: absolute;
-    inset: 14rem 5rem auto 5rem;
+    inset: 24rem 5rem auto 5rem;
     height: 2rem;
     background: #444;
   }

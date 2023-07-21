@@ -75,6 +75,7 @@ $(function () {
 
 
     $('.mobile_btn').on('click', function () {
+        $(this).toggleClass('on');
         $('.Header .gnb').toggleClass('on');
     })
 
