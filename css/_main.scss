@@ -1,0 +1,531 @@
+.MainVisual {
+  .MainImage {
+    position: relative;
+    height: calc(100vh - 140rem);
+
+    figure {
+      .img_box {
+        position: relative;
+
+        img {
+          object-fit: cover;
+          height: calc(100vh - 140rem);
+          width: 100%;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0 0 0 0;
+          background-color: rgba(0, 0, 0, 0.6);
+        }
+      }
+
+      figcaption {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $color-white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+        h2 {
+          font-size: 72rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          margin: 0 0 80rem 0;
+
+          animation: TxtDownAni 0.5s both;
+        }
+
+        strong {
+          display: block;
+          font-size: 24rem;
+          font-weight: 400;
+          margin: 0 0 40rem 0;
+          letter-spacing: -0.1em;
+          animation: TxtUpAni 1s both;
+          animation-delay: 0.3s;
+        }
+
+        p {
+          font-size: 24rem;
+          font-weight: 400;
+          margin: 0 0 80rem 0;
+          letter-spacing: -0.1em;
+          animation: TxtUpAni 1s both;
+          animation-delay: 0.5s;
+
+          span {
+            color: $color-yf;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .scroll_arrow {
+      position: absolute;
+      left: 50%;
+      bottom: 50rem;
+      margin-left: -40rem;
+      z-index: 10;
+      width: 80rem;
+      height: 60rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .scroll_arrow:before {
+      content: "";
+      width: 40rem;
+      height: 40rem;
+      position: absolute;
+      top: 0px;
+      left: 20rem;
+    }
+
+    .scroll_arrow div:nth-child(1) {
+      font-size: 20rem;
+      animation: arrow 1200ms 0s linear infinite;
+    }
+
+    .scroll_arrow .scroll_arrow_ft {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      font-size: 12rem;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+  }
+}
+
+.MainIntroduce {
+  .intro_inner {
+    height: 500rem;
+    padding: 0;
+    background-color: $color-sub;
+    max-width: 1400rem;
+    margin: 0 auto;
+
+    .intro_slider {
+      position: relative;
+
+      .itm {}
+
+      .itm01 .img_box {
+        background: url(../images/img01.jpg) no-repeat top left/cover;
+        width: 720rem;
+        height: 500rem;
+      }
+
+      .itm02 .img_box {
+        background: url(../images/img02.jpg) no-repeat top left/cover;
+        width: 720rem;
+        height: 500rem;
+      }
+
+      .itm03 .img_box {
+        background: url(../images/img03.jpg) no-repeat top left/cover;
+        width: 720rem;
+        height: 500rem;
+      }
+    }
+  }
+
+  .des {
+    position: absolute;
+    left: 720rem;
+    top: 0;
+    padding: 100rem 80rem;
+    height: 100%;
+    visibility: none;
+    display: none;
+    color: $color-white;
+
+    span {
+      color: $color-mf;
+      font-weight: 500;
+    }
+
+    &.on {
+      visibility: visible;
+      display: block;
+    }
+
+    strong {
+      display: block;
+      font-size: 40rem;
+      font-weight: 700;
+      animation: TxtleftAni 0.5s both;
+      margin: 0 0 56rem 0;
+    }
+
+    p {
+      font-size: 24rem;
+      font-weight: 100;
+      animation: TxtUpAni 0.5s both;
+      animation-delay: 0.3s;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 430rem;
+    left: 500rem;
+    margin-left: 0;
+    z-index: 1;
+    width: 100%;
+    color: $color-white;
+  }
+
+  .swiper-button-next {
+    margin-left: 100rem;
+  }
+}
+
+.MainLocation {
+
+  background: $color-gray;
+
+  .title_s {
+    p {
+      span {
+        color: $color-main;
+      }
+    }
+  }
+
+  .content {
+    max-width: 1200rem;
+    text-align: center;
+
+    figure {
+      text-align: center;
+      margin: 0 0 50rem 0;
+
+      .map_box {
+        img {
+          width: 1200rem;
+        }
+      }
+    }
+
+    .txt {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30rem;
+
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 50rem 0;
+
+      .txt_box {
+        color: $color-white;
+        padding: 40rem;
+
+        span {
+          text-align: left;
+          display: block;
+          font-weight: 100;
+          letter-spacing: 0.15em;
+          margin: 0 0 32rem 0;
+
+          em {
+            letter-spacing: 0;
+            font-size: 20rem;
+            font-weight: 500;
+          }
+        }
+
+        strong {
+          text-align: right;
+          display: block;
+          font-size: 36rem;
+          font-weight: 600;
+          margin: 0 0 16rem 0;
+        }
+
+        p {
+          text-align: right;
+          font-size: 18rem;
+          font-weight: 300;
+          color: $color-line;
+        }
+
+        &:nth-child(1),
+        &:nth-child(4) {
+          background: $color-sub;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          background: $color-main;
+        }
+      }
+    }
+  }
+}
+
+
+.MainPremium {
+
+  .title_s {
+    p {
+      span {
+        color: $color-main;
+      }
+    }
+  }
+
+  .case {
+    position: relative;
+    max-width: 1200rem;
+    background: $color-sub;
+    color: $color-white;
+    padding: 140rem 100rem;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1140rem;
+      height: 99%;
+      border: 1px solid $color-rgba25505;
+    }
+
+
+    .tit {
+      margin: 0 0 80rem 0;
+
+
+      span {
+        display: block;
+        font-size: 20rem;
+        margin: 0 256rem -56rem 0;
+      }
+
+      strong {
+
+        font-size: 56rem;
+        display: block;
+        font-weight: 600;
+        color: $color-mf;
+
+        em {
+          font-size: 120rem;
+        }
+
+      }
+
+
+    }
+
+    .img_box {
+      margin: 0 0 80rem 0;
+      width: 100%;
+
+      figure {
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+
+    .con_box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(600rem, 1fr));
+      align-items: center;
+      gap: 4rem;
+      width: 100%;
+
+
+      .right {
+        text-align: right;
+
+        i {
+          color: $color-line;
+        }
+
+        strong {
+          color: $color-line2;
+        }
+
+
+      }
+
+      .left {
+        text-align: left;
+
+
+        i {
+          color: $color-mf;
+        }
+
+        strong {
+          color: $color-mf;
+        }
+
+      }
+
+      .itm figure {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 36rem;
+
+        img {
+          width: 100%;
+        }
+
+        figcaption {
+
+
+          padding: 48rem;
+
+          i {
+            display: block;
+            font-size: 60rem;
+            margin: 0 0 10rem 0;
+          }
+
+          span {
+            display: block;
+            margin: 0 0 32rem 0;
+            font-weight: 100;
+            letter-spacing: 0.1em;
+
+            em {
+              letter-spacing: 0;
+              font-size: 20rem;
+              font-weight: 500;
+            }
+          }
+
+          p {
+            font-size: 24rem;
+            font-weight: 200;
+            color: $color-line;
+          }
+
+          strong {
+            font-size: 48rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.MainInterior {
+
+  background: $color-gray;
+
+  .tab_menu {
+    max-width: 1200rem;
+    margin: 0 auto;
+
+    .tab_link {
+      display: table;
+      /* table-layout: fixed; 테이블 자식들에게 동일한 넓이를 가지게 함 */
+      table-layout: fixed;
+      width: 100%;
+      margin: 0 0 24rem 0;
+
+      li {
+
+        text-align: center;
+        font-size: 35rem;
+        font-weight: 200;
+        font-weight: 500;
+
+
+      }
+
+      >* {
+        display: table-cell;
+        background: $color-sub;
+        color: #ffffff;
+      }
+
+      >*.on {
+        position: relative;
+
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 25%;
+          bottom: 0;
+          width: 50%;
+          height: 4rem;
+          background: $color-mf;
+        }
+
+        span {
+          color: $color-mf;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 10px 20rem;
+        text-align: center;
+      }
+
+
+    }
+
+    .tab_content {
+      .tab_itm {
+        visibility: hidden;
+        display: none;
+        overflow: hidden;
+
+        &.on {
+          visibility: visible;
+          display: block;
+          height: 100%;
+        }
+
+        strong {
+          display: block;
+          text-align: center;
+          font-size: 56rem;
+          font-weight: 700;
+          margin: 0 0 24rem 0;
+
+          sup {
+            font-size: 30rem;
+            font-weight: 900;
+          }
+
+          em {
+            font-size: 70rem;
+            text-align: center;
+
+            color: $color-mf;
+            font-weight: 800;
+          }
+        }
+
+        figure {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+  }
+}

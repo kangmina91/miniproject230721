@@ -1,0 +1,1161 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@keyframes TxtDownAni {
+  0% {
+    opacity: 0;
+    transform: translate(0, -150rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes TxtUpAni {
+  0% {
+    opacity: 0;
+    transform: translate(0, 150rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes TxtrightAni {
+  0% {
+    opacity: 0;
+    transform: translate(-150rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes TxtleftAni {
+  0% {
+    opacity: 0;
+    transform: translate(150rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(0px, 9px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0px, 18px);
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: normal;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:hover {
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+i,
+em,
+address {
+  font-style: normal;
+}
+
+body {
+  line-height: 1;
+  color: #333;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+  font-size: 16rem;
+}
+
+html {
+  font-size: 6.25%;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* line-height : 3rem + 3rem */
+p {
+  line-height: 1.375;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sec {
+  padding: 100rem 0;
+}
+.sec .title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  margin: 0 auto 40rem auto;
+}
+.sec .title h2 {
+  font-size: 32rem;
+  font-weight: 700;
+  margin: 0 0 16rem 0;
+}
+.sec .title .desc {
+  font-size: 16rem;
+  font-weight: 400;
+  color: #666;
+}
+.sec .title_s {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  margin: 0 auto 40rem auto;
+}
+.sec .title_s h2 {
+  display: inline-block;
+  position: relative;
+  padding: 15rem 0;
+  font-size: 48rem;
+  margin: 0 0 32rem 0;
+}
+.sec .title_s h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 1rem;
+  background: #333;
+}
+.sec .title_s h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 1rem;
+  background: #333;
+}
+.sec .title_s p {
+  font-size: 24rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.btn_m {
+  display: block;
+  border-radius: 32rem;
+  font-size: 20rem;
+  font-weight: 600;
+  background: #d11a45;
+  padding: 15rem;
+  margin: 0 auto;
+  width: 300rem;
+  transition: 0.2s;
+  animation: TxtUpAni 1s both;
+  animation-delay: 0.7s;
+}
+.btn_m:hover {
+  background-color: #f08200;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 32rem;
+  font-size: 20rem;
+  font-weight: 600;
+  background: #d11a45;
+  padding: 15rem 60rem;
+  margin: 0 auto;
+  transition: 0.2s;
+  color: #fff;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #f08200;
+}
+
+.mobile_btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 아이폰 반응형 대응 방식 */
+  html {
+    /* vw 390인 디바이스를 기준으로 폰트 사이즈를 pc에서 쓰는 rem과 동일하게 만드는 법 */
+    font-size: 0.2564102564vw;
+    /* 390 size에 맞춤 (16/390*6.25/100) 디자인 사이즈 */
+  }
+  .sec {
+    padding: 50rem 0;
+  }
+}
+/* 그냥 반응형을 만들어버리는 소스 */
+.r_inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.Header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.Header .top {
+  height: 40rem;
+  background: #f08200;
+  font-size: 15rem;
+  color: #fff;
+  line-height: 40rem;
+}
+.Header .top.on {
+  height: 0;
+}
+.Header .top .left {
+  float: left;
+  padding: 0 0 0 15rem;
+}
+.Header .top .right {
+  float: right;
+  padding: 0 15rem 0 0;
+}
+.Header .top .icon {
+  float: right;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0 15rem;
+}
+.Header .header_wrap {
+  height: 100rem;
+  box-shadow: 3rem 0rem 10rem rgba(0, 0, 0, 0.1);
+  padding: 0 15rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Header .header_wrap h1 {
+  font-size: 0;
+  white-space: nowrap;
+}
+.Header .header_wrap .gnb .main_menu {
+  display: flex;
+  justify-content: end;
+  gap: 60rem;
+  margin: 0 0 0 160rem;
+  white-space: nowrap;
+}
+.Header .header_wrap .gnb .main_menu a {
+  display: block;
+  color: var(--wc);
+  font-size: 20rem;
+  font-weight: 500;
+  line-height: 100rem;
+}
+.Header .header_wrap .gnb .main_menu > li {
+  position: relative;
+}
+.Header .header_wrap .gnb .main_menu > li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 300%);
+  top: 50%;
+  width: 0;
+  height: 4rem;
+  background: #F39801;
+}
+.Header .header_wrap .gnb .main_menu > li:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 4rem;
+  background: #F39801;
+  transition: 0.5s;
+}
+.Header .header_wrap .gnb .main_menu > li:hover .sub_menu {
+  top: 100rem;
+  opacity: 1;
+  visibility: visible;
+}
+.Header .header_wrap .gnb .main_menu .sub_menu {
+  position: absolute;
+  top: 150rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  width: 180rem;
+  text-align: center;
+  padding: 15rem 0;
+  border-radius: 20rem;
+  border: 2rem solid #ddd;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.Header .header_wrap .gnb .main_menu .sub_menu li ~ li {
+  border-top: 1px solid #ddd;
+}
+.Header .header_wrap .gnb .main_menu .sub_menu li:hover a {
+  font-weight: 700;
+}
+.Header .header_wrap .gnb .main_menu .sub_menu a {
+  display: block;
+  color: #444444;
+  font-size: 16rem;
+  line-height: 40rem;
+}
+.Header .header_wrap .tel {
+  white-space: nowrap;
+  text-align: center;
+  font-size: 56rem;
+  font-weight: 700;
+  line-height: 100rem;
+  height: 100rem;
+}
+.Header .header_wrap .tel i {
+  color: red;
+  font-size: 32rem;
+  vertical-align: top;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 46, 62, 0.2);
+  padding: 8rem 10rem;
+}
+
+.MainVisual .MainImage {
+  position: relative;
+  height: calc(100vh - 140rem);
+}
+.MainVisual .MainImage figure .img_box {
+  position: relative;
+}
+.MainVisual .MainImage figure .img_box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: calc(100vh - 140rem);
+  width: 100%;
+}
+.MainVisual .MainImage figure .img_box::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.MainVisual .MainImage figure figcaption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.MainVisual .MainImage figure figcaption h2 {
+  font-size: 72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0 0 80rem 0;
+  animation: TxtDownAni 0.5s both;
+}
+.MainVisual .MainImage figure figcaption strong {
+  display: block;
+  font-size: 24rem;
+  font-weight: 400;
+  margin: 0 0 40rem 0;
+  letter-spacing: -0.1em;
+  animation: TxtUpAni 1s both;
+  animation-delay: 0.3s;
+}
+.MainVisual .MainImage figure figcaption p {
+  font-size: 24rem;
+  font-weight: 400;
+  margin: 0 0 80rem 0;
+  letter-spacing: -0.1em;
+  animation: TxtUpAni 1s both;
+  animation-delay: 0.5s;
+}
+.MainVisual .MainImage figure figcaption p span {
+  color: #f5f503;
+  font-weight: 500;
+}
+.MainVisual .MainImage .scroll_arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 50rem;
+  margin-left: -40rem;
+  z-index: 10;
+  width: 80rem;
+  height: 60rem;
+  text-align: center;
+  color: #fff;
+}
+.MainVisual .MainImage .scroll_arrow:before {
+  content: "";
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  top: 0px;
+  left: 20rem;
+}
+.MainVisual .MainImage .scroll_arrow div:nth-child(1) {
+  font-size: 20rem;
+  animation: arrow 1200ms 0s linear infinite;
+}
+.MainVisual .MainImage .scroll_arrow .scroll_arrow_ft {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 12rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.MainIntroduce .intro_inner {
+  height: 500rem;
+  padding: 0;
+  background-color: #002e3e;
+  max-width: 1400rem;
+  margin: 0 auto;
+}
+.MainIntroduce .intro_inner .intro_slider {
+  position: relative;
+}
+.MainIntroduce .intro_inner .intro_slider .itm01 .img_box {
+  background: url(../images/img01.jpg) no-repeat top left/cover;
+  width: 720rem;
+  height: 500rem;
+}
+.MainIntroduce .intro_inner .intro_slider .itm02 .img_box {
+  background: url(../images/img02.jpg) no-repeat top left/cover;
+  width: 720rem;
+  height: 500rem;
+}
+.MainIntroduce .intro_inner .intro_slider .itm03 .img_box {
+  background: url(../images/img03.jpg) no-repeat top left/cover;
+  width: 720rem;
+  height: 500rem;
+}
+.MainIntroduce .des {
+  position: absolute;
+  left: 720rem;
+  top: 0;
+  padding: 100rem 80rem;
+  height: 100%;
+  visibility: none;
+  display: none;
+  color: #fff;
+}
+.MainIntroduce .des span {
+  color: #F39801;
+  font-weight: 500;
+}
+.MainIntroduce .des.on {
+  visibility: visible;
+  display: block;
+}
+.MainIntroduce .des strong {
+  display: block;
+  font-size: 40rem;
+  font-weight: 700;
+  animation: TxtleftAni 0.5s both;
+  margin: 0 0 56rem 0;
+}
+.MainIntroduce .des p {
+  font-size: 24rem;
+  font-weight: 100;
+  animation: TxtUpAni 0.5s both;
+  animation-delay: 0.3s;
+}
+.MainIntroduce .swiper-button-prev,
+.MainIntroduce .swiper-button-next {
+  top: 430rem;
+  left: 500rem;
+  margin-left: 0;
+  z-index: 1;
+  width: 100%;
+  color: #fff;
+}
+.MainIntroduce .swiper-button-next {
+  margin-left: 100rem;
+}
+
+.MainLocation {
+  background: #efefef;
+}
+.MainLocation .title_s p span {
+  color: #f08200;
+}
+.MainLocation .content {
+  max-width: 1200rem;
+  text-align: center;
+}
+.MainLocation .content figure {
+  text-align: center;
+  margin: 0 0 50rem 0;
+}
+.MainLocation .content figure .map_box img {
+  width: 1200rem;
+}
+.MainLocation .content .txt {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30rem;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 50rem 0;
+}
+.MainLocation .content .txt .txt_box {
+  color: #fff;
+  padding: 40rem;
+}
+.MainLocation .content .txt .txt_box span {
+  text-align: left;
+  display: block;
+  font-weight: 100;
+  letter-spacing: 0.15em;
+  margin: 0 0 32rem 0;
+}
+.MainLocation .content .txt .txt_box span em {
+  letter-spacing: 0;
+  font-size: 20rem;
+  font-weight: 500;
+}
+.MainLocation .content .txt .txt_box strong {
+  text-align: right;
+  display: block;
+  font-size: 36rem;
+  font-weight: 600;
+  margin: 0 0 16rem 0;
+}
+.MainLocation .content .txt .txt_box p {
+  text-align: right;
+  font-size: 18rem;
+  font-weight: 300;
+  color: #ddd;
+}
+.MainLocation .content .txt .txt_box:nth-child(1), .MainLocation .content .txt .txt_box:nth-child(4) {
+  background: #002e3e;
+}
+.MainLocation .content .txt .txt_box:nth-child(2), .MainLocation .content .txt .txt_box:nth-child(3) {
+  background: #f08200;
+}
+
+.MainPremium .title_s p span {
+  color: #f08200;
+}
+.MainPremium .case {
+  position: relative;
+  max-width: 1200rem;
+  background: #002e3e;
+  color: #fff;
+  padding: 140rem 100rem;
+  text-align: center;
+}
+.MainPremium .case::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1140rem;
+  height: 99%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.MainPremium .case .tit {
+  margin: 0 0 80rem 0;
+}
+.MainPremium .case .tit span {
+  display: block;
+  font-size: 20rem;
+  margin: 0 256rem -56rem 0;
+}
+.MainPremium .case .tit strong {
+  font-size: 56rem;
+  display: block;
+  font-weight: 600;
+  color: #F39801;
+}
+.MainPremium .case .tit strong em {
+  font-size: 120rem;
+}
+.MainPremium .case .img_box {
+  margin: 0 0 80rem 0;
+  width: 100%;
+}
+.MainPremium .case .img_box figure img {
+  width: 100%;
+}
+.MainPremium .case .con_box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600rem, 1fr));
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+.MainPremium .case .con_box .right {
+  text-align: right;
+}
+.MainPremium .case .con_box .right i {
+  color: #ddd;
+}
+.MainPremium .case .con_box .right strong {
+  color: #f9f9f9;
+}
+.MainPremium .case .con_box .left {
+  text-align: left;
+}
+.MainPremium .case .con_box .left i {
+  color: #F39801;
+}
+.MainPremium .case .con_box .left strong {
+  color: #F39801;
+}
+.MainPremium .case .con_box .itm figure {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 36rem;
+}
+.MainPremium .case .con_box .itm figure img {
+  width: 100%;
+}
+.MainPremium .case .con_box .itm figure figcaption {
+  padding: 48rem;
+}
+.MainPremium .case .con_box .itm figure figcaption i {
+  display: block;
+  font-size: 60rem;
+  margin: 0 0 10rem 0;
+}
+.MainPremium .case .con_box .itm figure figcaption span {
+  display: block;
+  margin: 0 0 32rem 0;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+}
+.MainPremium .case .con_box .itm figure figcaption span em {
+  letter-spacing: 0;
+  font-size: 20rem;
+  font-weight: 500;
+}
+.MainPremium .case .con_box .itm figure figcaption p {
+  font-size: 24rem;
+  font-weight: 200;
+  color: #ddd;
+}
+.MainPremium .case .con_box .itm figure figcaption strong {
+  font-size: 48rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.MainInterior {
+  background: #efefef;
+}
+.MainInterior .tab_menu {
+  max-width: 1200rem;
+  margin: 0 auto;
+}
+.MainInterior .tab_menu .tab_link {
+  display: table;
+  /* table-layout: fixed; 테이블 자식들에게 동일한 넓이를 가지게 함 */
+  table-layout: fixed;
+  width: 100%;
+  margin: 0 0 24rem 0;
+}
+.MainInterior .tab_menu .tab_link li {
+  text-align: center;
+  font-size: 35rem;
+  font-weight: 200;
+  font-weight: 500;
+}
+.MainInterior .tab_menu .tab_link > * {
+  display: table-cell;
+  background: #002e3e;
+  color: #ffffff;
+}
+.MainInterior .tab_menu .tab_link > *.on {
+  position: relative;
+}
+.MainInterior .tab_menu .tab_link > *.on::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  width: 50%;
+  height: 4rem;
+  background: #F39801;
+}
+.MainInterior .tab_menu .tab_link > *.on span {
+  color: #F39801;
+}
+.MainInterior .tab_menu .tab_link a {
+  display: block;
+  padding: 10px 20rem;
+  text-align: center;
+}
+.MainInterior .tab_menu .tab_content .tab_itm {
+  visibility: hidden;
+  display: none;
+  overflow: hidden;
+}
+.MainInterior .tab_menu .tab_content .tab_itm.on {
+  visibility: visible;
+  display: block;
+  height: 100%;
+}
+.MainInterior .tab_menu .tab_content .tab_itm strong {
+  display: block;
+  text-align: center;
+  font-size: 56rem;
+  font-weight: 700;
+  margin: 0 0 24rem 0;
+}
+.MainInterior .tab_menu .tab_content .tab_itm strong sup {
+  font-size: 30rem;
+  font-weight: 900;
+}
+.MainInterior .tab_menu .tab_content .tab_itm strong em {
+  font-size: 70rem;
+  text-align: center;
+  color: #F39801;
+  font-weight: 800;
+}
+.MainInterior .tab_menu .tab_content .tab_itm figure img {
+  width: 100%;
+}
+
+.Footer {
+  background: #fff;
+  padding: 50rem 0;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+.Footer .content {
+  max-width: 1200rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120rem;
+}
+.Footer .content h2 img {
+  width: 100%;
+}
+.Footer .left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4rem;
+}
+.Footer .left > ul li {
+  position: relative;
+}
+.Footer .left ul li ~ li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10rem;
+  transform: translate(0, -50%);
+  width: 1rem;
+  height: 12rem;
+  background: #777;
+}
+.Footer .ft_menu {
+  display: flex;
+  gap: 20rem;
+  font-size: 16rem;
+  margin: 0 0 24rem 0;
+  word-break: keep-all;
+}
+.Footer .contact,
+.Footer .adress,
+.Footer .reference {
+  display: flex;
+  gap: 20rem;
+  color: #555;
+  font-size: 16rem;
+}
+.Footer .adress {
+  margin: 0 0 8rem 0;
+}
+.Footer .reference {
+  color: #333;
+  margin: 0 0 16rem 0;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .Header .top {
+    display: none;
+  }
+  .Header .header_wrap {
+    flex-direction: column;
+    height: 180rem;
+  }
+  .Header .header_wrap .gnb {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 999;
+    background: #f9f9f9;
+    width: calc(100% - 90rem);
+    border-right: 1px solid #ddd;
+    padding: 100rem 24rem 0 24rem;
+  }
+  .Header .header_wrap .gnb.on {
+    left: 0;
+    inset: 0 0 0 0;
+  }
+  .Header .header_wrap .gnb > .main_menu {
+    flex-direction: column;
+    gap: 20rem;
+    margin: 0 auto;
+  }
+  .Header .header_wrap .gnb > .main_menu li .sub_menu {
+    position: static;
+    transform: translate(0, 0);
+    width: auto;
+    background: #fff;
+    border: none;
+    text-align: center;
+    border-radius: 0;
+    display: none;
+    transition: none;
+    padding: 0;
+  }
+  .Header .header_wrap .gnb > .main_menu li .sub_menu li:hover a {
+    font-weight: 500;
+  }
+  .Header .header_wrap .gnb > .main_menu li a {
+    display: block;
+    line-height: 40rem;
+    color: #444;
+  }
+  .Header .header_wrap .gnb > .main_menu li:hover .sub_menu {
+    display: none;
+  }
+  .Header .header_wrap .gnb > .main_menu li::after {
+    display: none;
+  }
+  .Header .header_wrap .gnb > .main_menu li:hover::after {
+    display: none;
+  }
+  .Header .header_wrap .tel {
+    border-top: 1px solid #ddd;
+  }
+}
+@media (max-width: 768px) {
+  /* r */
+  .mobile_btn {
+    /* r */
+    display: block;
+    position: fixed;
+    inset: 30rem 30rem auto auto;
+    z-index: 1000;
+    width: 30rem;
+    height: 30rem;
+    background: #ddd;
+    border-radius: 5rem;
+  }
+  .mobile_btn::before, .mobile_btn::after {
+    content: "";
+    position: absolute;
+    inset: 14rem 5rem auto 5rem;
+    height: 2rem;
+    background: #444;
+  }
+  .mobile_btn.on::before {
+    transform: rotate(45deg);
+    transition: 0.5s 0.2s;
+  }
+  .mobile_btn.on::after {
+    transform: rotate(-45deg);
+    transition: 0.5s 0.6s;
+  }
+  .mobile_btn.on button::before, .mobile_btn.on button::after {
+    display: none;
+  }
+  .mobile_btn button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .mobile_btn button::before, .mobile_btn button::after {
+    content: "";
+    position: absolute;
+    height: 2rem;
+    background: #444;
+  }
+  .mobile_btn button::before {
+    inset: 7rem 5rem auto 5rem;
+  }
+  .mobile_btn button::after {
+    inset: auto 5rem 7rem 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .MainVisual .MainImage figure figcaption h2 {
+    font-size: 48rem;
+  }
+  .MainVisual .MainImage .scroll_arrow {
+    bottom: 20rem;
+  }
+}
+@media (max-width: 768px) {
+  .MainIntroduce {
+    padding: 50rem 0 0 0;
+  }
+  .MainIntroduce .intro_inner {
+    height: 600rem;
+    padding: 0;
+  }
+  .MainIntroduce .intro_inner .intro_slider {
+    height: 100vh;
+    width: 100%;
+  }
+  .MainIntroduce .intro_inner .intro_slider .itm .img_box {
+    height: 300rem;
+  }
+  .MainIntroduce .des {
+    left: 0;
+    top: 350rem;
+    padding: 0 30rem;
+  }
+  .MainIntroduce .des.on {
+    visibility: visible;
+    display: block;
+  }
+  .MainIntroduce .des strong {
+    font-size: 24rem;
+    margin: 0 0 40rem 0;
+  }
+  .MainIntroduce .des p {
+    font-size: 20rem;
+  }
+  .MainIntroduce .swiper-button-prev,
+  .MainIntroduce .swiper-button-next {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .MainLocation .content .txt {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .MainPremium .case {
+    padding: 60rem 15rem;
+    text-align: center;
+  }
+  .MainPremium .case::before {
+    display: none;
+  }
+  .MainPremium .case .tit {
+    margin: 0 0 30rem 0;
+  }
+  .MainPremium .case .tit span {
+    margin: 0 auto 16rem auto;
+  }
+  .MainPremium .case .tit strong {
+    font-size: 56rem;
+    display: block;
+    font-weight: 600;
+    color: #F39801;
+  }
+  .MainPremium .case .tit strong em {
+    font-size: 120rem;
+  }
+  .MainPremium .case .con_box {
+    grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+    gap: 20rem;
+  }
+  .MainPremium .case .con_box .itm figure {
+    grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+  }
+  .MainPremium .case .con_box .itm figure figcaption {
+    padding: 0;
+  }
+  .MainPremium .case .con_box .itm figure figcaption i {
+    font-size: 40rem;
+  }
+  .MainPremium .case .con_box .itm figure figcaption span {
+    margin: 0 0 24rem 0;
+  }
+  .MainPremium .case .con_box .itm figure figcaption p {
+    font-size: 20rem;
+  }
+  .MainPremium .case .con_box .itm figure figcaption strong {
+    font-size: 32rem;
+  }
+}
+@media (max-width: 768px) {
+  .Footer .content {
+    flex-direction: column;
+    gap: 40rem;
+  }
+  .Footer .ft_menu {
+    display: none;
+  }
+  .Footer .left ul li ~ li::before {
+    display: none;
+  }
+  .Footer .contact,
+  .Footer .adress,
+  .Footer .reference {
+    flex-direction: column;
+    text-align: center;
+  }
+  .Footer .reference {
+    text-align: center;
+  }
+  .Footer span {
+    text-align: center;
+  }
+}
+/* 노트북 & 테블릿 가로 */
+@media all and (min-width: 768px) and (max-width: 1600px) {
+  .Header .header_wrap .gnb .main_menu {
+    display: flex;
+    justify-content: end;
+    gap: 20rem;
+    margin: 0;
+    white-space: nowrap;
+  }
+  .Header .header_wrap .gnb .main_menu a {
+    display: block;
+    color: var(--wc);
+    font-size: 16rem;
+    font-weight: 500;
+    line-height: 100rem;
+  }
+  .Header .header_wrap .tel {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 16rem;
+    font-weight: 700;
+    line-height: 100rem;
+    height: 100rem;
+  }
+  .Header .header_wrap .tel i {
+    color: red;
+    font-size: 16rem;
+    vertical-align: top;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 46, 62, 0.2);
+    padding: 4rem 6rem;
+    margin: 0 0 0 10rem;
+  }
+  .MainIntroduce .intro_inner {
+    height: 500rem;
+    padding: 0;
+    background-color: #002e3e;
+    max-width: 1400rem;
+    margin: 0 auto;
+  }
+  .MainIntroduce .intro_inner .intro_slider {
+    position: relative;
+    width: 100%;
+  }
+  .MainIntroduce .intro_inner .intro_slider .itm .img_box {
+    width: 50%;
+  }
+  .MainIntroduce .intro_inner .intro_slider .itm01 .img_box {
+    background: url(../images/img01.jpg) no-repeat top left/cover;
+  }
+  .MainIntroduce .intro_inner .intro_slider .itm02 .img_box {
+    background: url(../images/img02.jpg) no-repeat top left/cover;
+  }
+  .MainIntroduce .intro_inner .intro_slider .itm03 .img_box {
+    background: url(../images/img03.jpg) no-repeat top left/cover;
+  }
+  .MainIntroduce .des {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    padding: 40rem;
+    height: 100%;
+    visibility: none;
+    display: none;
+    color: #fff;
+  }
+  .MainIntroduce .des span {
+    color: #F39801;
+    font-weight: 500;
+  }
+  .MainIntroduce .des.on {
+    visibility: visible;
+    display: block;
+  }
+  .MainIntroduce .des strong {
+    display: block;
+    font-size: 40rem;
+    font-weight: 700;
+    animation: TxtleftAni 0.5s both;
+    margin: 0 0 56rem 0;
+  }
+  .MainIntroduce .des p {
+    font-size: 24rem;
+    font-weight: 100;
+    animation: TxtUpAni 0.5s both;
+    animation-delay: 0.3s;
+  }
+  .MainIntroduce .swiper-button-prev,
+  .MainIntroduce .swiper-button-next {
+    top: 90%;
+    left: 35%;
+    margin-left: 0;
+    z-index: 1;
+    width: 100%;
+    color: #fff;
+  }
+  .MainIntroduce .swiper-button-next {
+    margin-left: 100rem;
+  }
+}/*# sourceMappingURL=style.css.map */

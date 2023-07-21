@@ -1,0 +1,196 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: normal;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:hover {
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+i,
+em,
+address {
+  font-style: normal;
+}
+
+body {
+  line-height: 1;
+  color: $color-body;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  letter-spacing: -0.025em;
+  word-break: keep-all;
+  font-size: 16rem;
+}
+
+html {
+  font-size: 6.25%;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* line-height : 3rem + 3rem */
+p {
+  line-height: 1.375;
+}
+
+.inner {
+  @include inner();
+}
+
+.sec {
+  padding: 100rem 0;
+
+  .title {
+    @include inner();
+    margin: 0 auto 40rem auto;
+
+    h2 {
+      font-size: 32rem;
+      font-weight: 700;
+      margin: 0 0 16rem 0;
+    }
+
+    .desc {
+      font-size: 16rem;
+      font-weight: 400;
+      color: #666;
+    }
+  }
+
+  .title_s {
+    text-align: center;
+    @include inner();
+    margin: 0 auto 40rem auto;
+
+    h2 {
+      display: inline-block;
+      position: relative;
+      padding: 15rem 0;
+      font-size: 48rem;
+      margin: 0 0 32rem 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 1rem;
+        background: $color-body;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        height: 1rem;
+        background: $color-body;
+      }
+    }
+
+    p {
+      font-size: 24rem;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+  }
+}
+
+.btn_m {
+  display: block;
+  border-radius: 32rem;
+  font-size: 20rem;
+  font-weight: 600;
+  background: #d11a45;
+  padding: 15rem;
+  margin: 0 auto;
+  width: 300rem;
+  transition: 0.2s;
+  animation: TxtUpAni 1s both;
+  animation-delay: 0.7s;
+
+  &:hover {
+    background-color: $color-main;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 32rem;
+  font-size: 20rem;
+  font-weight: 600;
+  background: #d11a45;
+  padding: 15rem 60rem;
+  margin: 0 auto;
+  transition: 0.2s;
+  color: $color-white;
+  text-align: center;
+
+  &:hover {
+    background-color: $color-main;
+  }
+}
+
+.mobile_btn {
+  display: none;
+}
+
+@media(max-width: 768px) {
+
+  /* 아이폰 반응형 대응 방식 */
+  html {
+    /* vw 390인 디바이스를 기준으로 폰트 사이즈를 pc에서 쓰는 rem과 동일하게 만드는 법 */
+    font-size: 0.25641025641vw;
+    /* 390 size에 맞춤 (16/390*6.25/100) 디자인 사이즈 */
+  }
+
+  .sec {
+    padding: 50rem 0;
+  }
+}
+
+/* 그냥 반응형을 만들어버리는 소스 */
+.r_inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}

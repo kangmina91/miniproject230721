@@ -1,0 +1,166 @@
+.Header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  .top {
+    height: 40rem;
+    background: $color-main;
+    font-size: 15rem;
+    color: $color-white;
+    line-height: 40rem;
+
+    &.on {
+      height: 0;
+    }
+
+    .left {
+      float: left;
+      padding: 0 0 0 15rem;
+    }
+
+    .right {
+      float: right;
+      padding: 0 15rem 0 0;
+    }
+
+    .icon {
+      float: right;
+      border-left: 1px solid $color-rgba25505;
+      padding: 0 15rem;
+    }
+  }
+
+  .header_wrap {
+    height: 100rem;
+    box-shadow: 3rem 0rem 10rem $color-rgba01;
+    padding: 0 15rem;
+    background: $color-white;
+
+    @include flex_sb();
+
+    h1 {
+      font-size: 0;
+      white-space: nowrap;
+    }
+
+    .gnb {
+      .main_menu {
+
+        display: flex;
+        justify-content: end;
+        gap: 60rem;
+        margin: 0 0 0 160rem;
+        white-space: nowrap;
+
+
+        a {
+          display: block;
+          color: var(--wc);
+          font-size: 20rem;
+          font-weight: 500;
+          line-height: 100rem;
+        }
+
+        >li {
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 300%);
+            top: 50%;
+            width: 0;
+            height: 4rem;
+            background: $color-mf;
+          }
+
+          &:hover::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            height: 4rem;
+            background: $color-mf;
+            transition: 0.5s;
+
+          }
+
+        }
+
+        >li:hover {
+          .sub_menu {
+            top: 100rem;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        .sub_menu {
+          position: absolute;
+          top: 150rem;
+          left: 50%;
+          transform: translate(-50%, 0);
+          background: $color-white;
+          width: 180rem;
+          text-align: center;
+
+          padding: 15rem 0;
+          border-radius: 20rem;
+          border: 2rem solid $color-line;
+
+          opacity: 0;
+          visibility: hidden;
+
+          transition: 0.3s;
+
+          li~li {
+            border-top: 1px solid $color-line;
+          }
+
+          li:hover {
+            a {
+              font-weight: 700;
+            }
+
+          }
+
+          a {
+            display: block;
+            color: $color-dark;
+            font-size: 16rem;
+            line-height: 40rem;
+
+
+          }
+        }
+      }
+    }
+
+    .tel {
+      white-space: nowrap;
+      text-align: center;
+      font-size: 56rem;
+      font-weight: 700;
+      line-height: 100rem;
+      height: 100rem;
+
+
+      i {
+
+        color: red;
+        font-size: 32rem;
+        vertical-align: top;
+        border-radius: 50%;
+        border: 3px solid rgba($color: $color-sub, $alpha: .2);
+        padding: 8rem 10rem;
+
+      }
+    }
+  }
+
+}
