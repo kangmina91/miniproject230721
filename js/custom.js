@@ -8,6 +8,7 @@ wd[3] = "수요일";
 wd[4] = "목요일";
 wd[5] = "금요일";
 wd[6] = "토요일";
+
 year = date.getFullYear(); month = date.getMonth() + 1; day = date.getDate();
 var weekday = wd[date.getDay()];
 document.querySelector(".current_date").innerHTML = year + "년 " + month + "월 " + day + "일 " + weekday;
@@ -40,7 +41,6 @@ const IntroSwiper = new Swiper('.intro_slider', {
         }
     }
 });
-
 
 
 // JavaScript 탭 코드
