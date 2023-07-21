@@ -908,7 +908,7 @@ p {
     content: "";
     position: absolute;
     inset: 24rem 5rem auto 5rem;
-    height: 2rem;
+    height: 3rem;
     background: #444;
   }
   .mobile_btn.on::before {
@@ -930,7 +930,7 @@ p {
   .mobile_btn button::before, .mobile_btn button::after {
     content: "";
     position: absolute;
-    height: 2rem;
+    height: 3rem;
     background: #444;
   }
   .mobile_btn button::before {
