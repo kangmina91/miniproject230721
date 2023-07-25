@@ -100,8 +100,8 @@
         position: fixed;
         inset: 15rem 15rem auto auto;
         z-index: 1000;
-        width: 50rem;
-        height: 50rem;
+        width: 30rem;
+        height: 30rem;
         background: #ddd;
         border-radius: 5rem;
 
@@ -110,8 +110,8 @@
 
             content: "";
             position: absolute;
-            inset: 24rem 5rem auto 5rem;
-            height: 3rem;
+            inset: 14rem 5rem auto 5rem;
+            height: 2rem;
             background: #444;
         }
 
@@ -140,7 +140,7 @@
             &::after {
                 content: "";
                 position: absolute;
-                height: 3rem;
+                height: 2rem;
                 background: #444;
             }
 
@@ -351,11 +351,6 @@
         }
     }
 }
-
-
-
-
-
 
 
 

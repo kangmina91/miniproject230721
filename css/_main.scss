@@ -1,3 +1,4 @@
+// 메인 비쥬얼 섹션
 .MainVisual {
   .MainImage {
     position: relative;
@@ -103,6 +104,7 @@
   }
 }
 
+// 메인 인트로듀스 섹션
 .MainIntroduce {
   .intro_inner {
     height: 500rem;
@@ -187,6 +189,8 @@
   }
 }
 
+
+// 메인 로케이션 섹션
 .MainLocation {
 
   background: $color-gray;
@@ -270,7 +274,7 @@
   }
 }
 
-
+// 메인 프리미엄 섹션
 .MainPremium {
 
   .title_s {
@@ -427,6 +431,7 @@
   }
 }
 
+// 메인 인테리어 섹션
 .MainInterior {
 
   background: $color-gray;

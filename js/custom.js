@@ -15,10 +15,8 @@ document.querySelector(".current_date").innerHTML = year + "년 " + month + "월
 
 
 
-
-const INTRO_SLIDE_LIST = document.querySelectorAll('.intro_slider .des')
-
 // 소개 스와이퍼
+const INTRO_SLIDE_LIST = document.querySelectorAll('.intro_slider .des')
 const IntroSwiper = new Swiper('.intro_slider', {
     effect: 'fade',
     loop: true,
@@ -61,9 +59,10 @@ tabLinks.forEach((link, idx) => {
     });
 });
 
-
+// 제이쿼리 
 $(function () {
 
+    // 모바일
     $('.Header .gnb>.main_menu>li>a').on('click', function (e) {
         if ($('.Header .gnb').hasClass('on')) {
             e.preventDefault();
