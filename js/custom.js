@@ -69,9 +69,7 @@ $(function () {
             $(this).next().stop().slideToggle();
             $(this).parent().siblings().find('.sub_menu').slideUp();
         }
-
     });
-
 
     $('.mobile_btn').on('click', function () {
         $(this).toggleClass('on');

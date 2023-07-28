@@ -5,15 +5,21 @@
     .Header {
         .top {
             display: none;
+
         }
+
+
 
         .header_wrap {
             flex-direction: column;
-            height: 180rem;
+            height: 80rem;
+            border-bottom: 1px solid $color-line ;
+
 
             .gnb {
                 position: fixed;
                 top: 0;
+                bottom: 0;
                 left: -100%;
                 z-index: 999;
 
@@ -22,10 +28,10 @@
                 width: calc(100% - 90rem);
                 border-right: 1px solid $color-line ;
                 padding: 100rem 24rem 0 24rem;
+                transition: 0.5s;
 
                 &.on {
                     left: 0;
-                    inset: 0 0 0 0;
                 }
 
                 >.main_menu {
@@ -79,7 +85,7 @@
             }
 
             .tel {
-                border-top: 1px solid #ddd;
+                display: none;
             }
         }
     }
@@ -98,7 +104,7 @@
         display: block;
 
         position: fixed;
-        inset: 15rem 15rem auto auto;
+        inset: 25rem 25rem auto auto;
         z-index: 1000;
         width: 30rem;
         height: 30rem;
@@ -333,6 +339,17 @@
             ul li~li::before {
                 display: none;
             }
+
+            .adress {
+                li:first-child {
+                    font-size: 20rem;
+                    font-weight: 800;
+                }
+            }
+
+            .contact {
+                margin: 0 0 16rem 0;
+            }
         }
 
         .contact,
@@ -341,6 +358,8 @@
             flex-direction: column;
             text-align: center;
         }
+
+
 
         .reference {
             text-align: center;

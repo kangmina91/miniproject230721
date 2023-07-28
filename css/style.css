@@ -528,6 +528,7 @@ p {
 
 .MainLocation {
   background: #efefef;
+  overflow: hidden;
 }
 .MainLocation .title_s p span {
   color: #f08200;
@@ -837,21 +838,23 @@ p {
   }
   .Header .header_wrap {
     flex-direction: column;
-    height: 180rem;
+    height: 80rem;
+    border-bottom: 1px solid #ddd;
   }
   .Header .header_wrap .gnb {
     position: fixed;
     top: 0;
+    bottom: 0;
     left: -100%;
     z-index: 999;
     background: #f9f9f9;
     width: calc(100% - 90rem);
     border-right: 1px solid #ddd;
     padding: 100rem 24rem 0 24rem;
+    transition: 0.5s;
   }
   .Header .header_wrap .gnb.on {
     left: 0;
-    inset: 0 0 0 0;
   }
   .Header .header_wrap .gnb > .main_menu {
     flex-direction: column;
@@ -888,7 +891,7 @@ p {
     display: none;
   }
   .Header .header_wrap .tel {
-    border-top: 1px solid #ddd;
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -897,7 +900,7 @@ p {
     /* r */
     display: block;
     position: fixed;
-    inset: 15rem 15rem auto auto;
+    inset: 25rem 25rem auto auto;
     z-index: 1000;
     width: 30rem;
     height: 30rem;
@@ -1054,6 +1057,13 @@ p {
   }
   .Footer .left ul li ~ li::before {
     display: none;
+  }
+  .Footer .left .adress li:first-child {
+    font-size: 20rem;
+    font-weight: 800;
+  }
+  .Footer .left .contact {
+    margin: 0 0 16rem 0;
   }
   .Footer .contact,
   .Footer .adress,
